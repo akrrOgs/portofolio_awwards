@@ -70,7 +70,15 @@ const Experience = () => {
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}>
                     <div className="">
-                      <img src={card.imgPath} alt={card.title} />
+                      <img
+                        src={card.imgPath}
+                        alt={card.title}
+                        className={
+                          card.imgPath === "/images/exp-1.webp"
+                            ? "w-52 h-52 object-cover object-center"
+                            : ""
+                        }
+                      />
                     </div>
                   </GlowCard>
                 </div>
@@ -94,9 +102,21 @@ const Experience = () => {
                         </p>
                         <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
                           {card.responsibilities.map((responsibilty) => (
-                            <li className="text-lg" key={responsibilty}>
-                              {responsibilty}
-                            </li>
+                            <>
+                              {responsibilty.includes("https") ? (
+                                <a
+                                  href={responsibilty}
+                                  key={responsibilty}
+                                  className="text-lg"
+                                >
+                                  {responsibilty}
+                                </a>
+                              ) : (
+                                <li className="text-lg" key={responsibilty}>
+                                  {responsibilty}
+                                </li>
+                              )}
+                            </>
                           ))}
                         </ul>
                       </div>

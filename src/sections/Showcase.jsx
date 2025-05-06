@@ -50,10 +50,13 @@ const Showcase = () => {
               <img src="/images/project1.png" alt="Aoom-Zoom" />
             </div>
             <div className="text-content">
-              <h2>
+              <a
+                href="https://aoom-bram.vercel.app"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold"
+              >
                 Meeting, studying or teaching remotely becomes easier with a
                 sophisticated and easy-to-use application called Aoom.
-              </h2>
+              </a>
               <p className="text-white-50 md:text-xl">
                 An app built with React JS, Next JS & Tailwind CSS for a fast,
                 user-friendly experience.
@@ -67,13 +70,23 @@ const Showcase = () => {
               <div className="image-wrapper bg-[#ffefdb]">
                 <img src="/images/project2.png" alt="Store-it" />
               </div>
-              <h2>Storage Management Solution</h2>
+              <a
+                className="text-lg md:text-xl lg:text-2xl font-semibold mt-5"
+                href="https://storage-management-solution-nu.vercel.app"
+              >
+                Storage Management Solution
+              </a>
             </div>
             <div className="project" ref={project3}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="YC Directory" />
+                <img src="/images/project3.png" alt="Imaginify" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <a
+                href="https://imaginfy-abs.vercel.app"
+                className="text-lg md:text-xl lg:text-2xl font-semibold mt-5"
+              >
+                Imaginify - A Software as a Service (SaaS) Web Application
+              </a>
             </div>
           </div>
         </div>
